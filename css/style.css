@@ -1,0 +1,787 @@
+@font-face {
+    font-family: RussoOne;
+    src: url("/fonts/RussoOne-Regular.ttf");
+}
+@font-face {
+    font-family: "SourceSansPro";
+    src: url("/fonts/SourceSansPro-Regular.woff2"),
+        url("/fonts/SourceSansPro-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SourceSansPro";
+    src: url("/fonts/SourceSansPro-Light.woff2"),
+    url("/fonts/SourceSansPro-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+button, input {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: black;
+    margin: 0px;
+}
+button{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+header{
+    padding-top: 15px;
+}
+header>p{
+    color: white;
+    text-align: center;
+    font-size: 5em;
+    margin: 0;
+    font-family: RussoOne;
+    user-select: none;
+    padding:0;
+    mix-blend-mode: exclusion;
+}
+
+section{
+    overflow: hidden;
+}
+section.main{
+    background: black;
+    height: 100vh;
+    -webkit-box-shadow: 0px 0px 16px -1px #000000;
+    box-shadow: 0px 0px 16px -1px #000000;
+}
+section.header{
+    background: transparent;
+    position: absolute;
+    width: 100%;
+}
+section.footer{
+    background: black;
+}
+.footer-text{
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+}
+.footer-text>p{
+    font-family: "SourceSansPro";
+    font-weight: 400;
+    font-style: normal;
+    user-select: none;
+}
+.button-hunter{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+.default-button{
+    border-radius: 55px;
+    border: none;
+    font-family: "SourceSansPro";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    background: red;
+    color: white;
+    padding: 12px 15px;
+    margin: 0 35px 45px 0;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.default-button:hover{
+    background: blue;
+}
+.hunter{
+
+}
+.sidebar-form{
+    position: fixed;
+    left: 100%;
+    display: block;
+    z-index: 11;
+    height: 100%;
+}
+
+.form-and-videos{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    top: 0;
+    background: white;
+    z-index: 11;
+}
+.form-client{
+    height: calc(100% - 40px);
+    padding: 15px 40px;
+    flex: 0 0 50%;
+}
+.canvas-field{
+    flex: 0 0 50%;
+    height: 100%;
+}
+form#form input, form#form textarea{
+    font-family: "SourceSansPro";
+    font-weight: 300;
+    font-style: normal;
+}
+input[type='text'],input[type='tel'],input[type='email'],textarea[name='comment']{
+    width: calc(100% - 40px) ;
+    font-size: 30px;
+    margin: 25px 0;
+    padding: 10px 0px;
+    border-radius: 1px;
+    outline: none;
+    border-bottom: 2px solid #ddd;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: 0.3s;
+
+}
+input[type='text']:focus,input[type='tel']:focus,input[type='email']:focus,textarea[name='comment']:focus{
+    border-bottom: 2px solid blue;
+}
+input[type='text'],input[type='tel'],input[type='email']{
+
+
+}
+textarea[name='comment']{
+min-height: 150px;
+}
+input.buttonForm{
+    text-align: left;
+    margin: 50px 0px 0px 0px ;
+}
+.info-about-me{
+    font-family:  "SourceSansPro";
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+    font-size: 30px;
+    line-height: 45px;
+    margin: 50px 15px 50px 15px;
+}
+.crossOnButton:before{
+    font-size: 40px;
+    cursor: pointer;
+}
+.crossOnButton{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    margin: 10px;
+}
+.education{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+#canvas-education{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.container{
+    position: relative;
+    display: flex;
+    max-width: 2000px;
+    margin: 0 auto;
+
+}
+.education-text{
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+.education-text-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.education-image{
+    display: flex;
+    flex: 1 1 50%;
+    align-items: center;
+    justify-content: center;
+}
+.education-image>img{
+    width: 100%;
+}
+.education-images-block{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+.background-education{
+    position: fixed;
+    top: -1080px;
+    z-index: 0;
+    opacity: 0.4;
+    z-index: -1;
+    left: -520px;
+}
+.show-art{
+    position: relative;
+    background: white;
+    height: 100vh;
+}
+.text-art{
+    position: absolute;
+    font-family: SourceSansBold;
+    font-size: 8em;
+    margin: 0;
+}
+.education-text-block>p{
+    font-family: "SourceSansPro";
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.5em;
+    line-height: 1.5;
+    user-select: none;
+}
+p.text-description{
+    margin: 25px;
+    padding: 0;
+    width: 80%;
+    transition: 0.23s;
+}
+.all-my-works{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+    font-family: RussoOne;
+    font-size: 8em;
+    line-height: 1.5;
+    user-select: none;
+    opacity: 1;
+    animation: animationTextCenter 15s linear infinite;
+    mix-blend-mode: exclusion;
+}
+.hover-td{
+    background: black;
+    color: white;
+}
+
+.first-place-description{
+
+}
+.siria-description{
+
+}
+.bob-martley-text{
+    top: 40px;
+    left: 0px;
+}
+.siria-text{
+    bottom: 40px;
+    right: 20px;
+}
+.show-image-background{
+    width: 110%;
+    position: absolute;
+    opacity: 0.4;
+}
+.bobMarley-image{
+    position: relative;
+    width: 400px;
+    height: auto;
+}
+.siria-image{
+    position: relative;
+    width: 500px;
+}
+.show-left-block{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+}
+.show-right-block{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.text-desc-block{
+    flex-basis: 33.333%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.text-desc-block>p{
+    font-family: "SourceSansPro";
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.5em;
+    line-height: 1.5;
+    user-select: none;
+}
+.imageScroll{
+    position: relative;
+    flex: 0 0 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.main-show-image{
+    transition: 0.3s;
+    transform: scale(1);
+
+}
+.presentation{
+    position: relative;
+    height: 200vh;
+    background-image: url("/images/background.jpg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: 20px 150px;
+    animation: animateBackground 120s linear infinite;
+}
+.work-hobby-block{
+    background: white;
+}
+.background-white-opacity{
+    background: white;
+    opacity: 0.75;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.film-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.film-block>video{
+    z-index: 1;
+}
+.social-block{
+    width: 1170px;
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social>a>img{
+    width: 180px;
+    margin: 20px;
+    filter: hue-rotate(0deg);
+    transition: 2s;
+}
+.social>a>img:hover{
+    filter: hue-rotate(360deg);
+}
+.social>a{
+
+}
+.social>p{
+    font-family: "Source Sans Pro Light";
+    font-size: 4em;
+    color: white;
+    margin: 15px 0 15px 20px;
+}
+.urfinjus{
+    border-radius: 45px;
+    background: rgb(182,53,156);
+    background: linear-gradient(0deg, rgba(182,53,156,1) 0%, rgba(239,10,106,1) 100%);
+    animation: animateUrfinjus 15s linear infinite;
+}
+.urfinjus-copyright{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+    color: white;
+    padding-left: 15px;
+}
+.urfinjus-copyright>p{
+    text-align: center;
+    color: white;
+    font-family: "Source Sans Pro Regular";
+}
+.request-wait-block>img{
+    width: 100px;
+}
+.request-wait-block{
+    background: #fcfcfc;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(256, 256,256, 0.7);
+    opacity: 0;
+}
+.form-box{
+    opacity: 1;
+}
+
+@keyframes animateUrfinjus {
+
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(180deg);
+    }
+    100%{
+        filter: hue-rotate(0deg);
+    }
+}
+
+@keyframes animationTextCenter {
+    0%{
+        color: #AAB1BF;
+        filter: hue-rotate(0deg);
+    }
+    40%{
+        color: #DAB6F5;
+        filter: hue-rotate(180deg);
+    }
+    80%{
+        color: #DAE3F5;
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        color: #AAB1BF;
+        filter: hue-rotate(180deg);
+    }
+}
+@keyframes animateBackground {
+    0%{
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    100%{
+        background-position-x:  3840px;
+        background-position-y: 1080px;
+    }
+}
+
+
+@keyframes animateHueRotate {
+    0%{
+        filter: blur(10px);
+    }
+    50%{
+        filter: blur(15px);
+    }
+    90%{
+        filter:  blur(5px);
+    }
+    100%{
+        filter:  blur(10px);
+    }
+}
+
+
+
+
+
+
+.on-middle-screens{
+    display: none;
+}
+.col-6{
+    position: relative;
+    flex: 0 0 50%;
+    height: 100vh;
+}
+.col-4{
+    position: relative;
+    flex: 0 0 50%;
+    height: 100vh;
+}
+.hidden{
+    display: none!important;
+}
+
+@media (min-width: 2000px){
+    .background-education{
+        left: 0;
+    }
+}
+@media (max-width:1700px) {
+    .text-it{
+        top: 150px;
+        left: 55px;
+    }
+    .text-my{
+        top: 174px;
+        right: 115px;
+    }
+
+}
+@media (max-width: 1400px){
+    .text-works{
+        bottom: 81px;
+        left: 226px;
+    }
+    p.text-description{
+        font-size: 2.3em;
+    }
+    .education-image>img {
+        width: 48%;
+        margin: 12px;
+    }
+    .background-education{
+        left: -740px;
+    }
+}
+@media (max-width: 1200px){
+    .form-and-videos{
+        flex-direction: column;
+
+    }
+    .sidebar-form{
+        overflow-y:scroll;
+    }
+    .crossOnButton{
+        color: black;
+    }
+    .social-block{
+        width: auto;
+        margin-bottom: 60px;
+    }
+}
+@media (max-width: 1200px) and (min-width: 1000px){
+    .text-it{
+        top: 268px;
+        left: 61px;
+    }
+    .text-my{
+        top: 271px;
+        right: 46px;
+    }
+    .text-works{
+        bottom: 81px;
+        left: 226px;
+    }
+    .text-main{
+        font-size: 9em;
+    }
+    .background-education{
+        left: -1100px;
+    }
+    p.text-description{
+        font-size: 2.1em;
+    }
+    .education-image>img {
+        width: 43%;
+        margin: 12px;
+    }
+    .on-middle-screens{
+        display: flex;
+    }
+}
+@media (max-width: 1000px) and (min-width: 768px){
+    section.header {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header>p{
+        font-size: 4.5em;
+    }
+    header{
+        width: 100%;
+        background: black;
+    }
+    .text-it{
+        top: 161px;
+        left: 50px;
+    }
+    .text-my{
+        top: 140px;
+        right: 60px;
+    }
+    .text-works{
+        bottom: 127px;
+        left: 200px;
+    }
+    .text-main{
+        font-size: 8em;
+        display: none;
+    }
+    p.text-description {
+        font-size: 1.8em;
+    }
+    .background-education{
+        left: -1260px;
+    }
+    .on-middle-screens{
+        display: flex;
+    }
+
+}
+@media (max-width: 768px){
+    .success-sendmail > p{
+        margin: 0;
+    }
+    .success-sendmail{
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+    header{
+        width: 100%;
+        background: black;
+    }
+    .text-it {
+        top: 130px;
+        left: 15px;
+    }
+    .text-my {
+        top: 130px;
+        right: 13px;
+    }
+    .text-works {
+        bottom: 110px;
+        left: 36px;
+    }
+    .text-main{
+        font-size: 5em;
+        display: none;
+    }
+    .container{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .education{
+        height: auto;
+    }
+    p.text-description {
+        font-size: 2em;
+        margin: 13px;
+        padding: 0;
+        width: 100%;
+        transition: 0.23s;
+    }
+    .education-image>img{
+        width: 100%;
+        margin: 0;
+    }
+    .default-button {
+        margin: 15px auto;
+    }
+    .button-hunter {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .show-art{
+        height: auto;
+    }
+    .text-desc-block{
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+    }
+    .col-4{
+        height: auto;
+    }
+    .imageScroll{
+        flex: none;
+    }
+    .bobMarley-image{
+        width: 300px;
+    }
+    .siria-image{
+        width: 100%;
+    }
+    .col-6{
+        order: 2;
+        height: auto;
+    }
+    .presentation{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .all-my-works {
+        height: 100%;
+    }
+    .text-center{
+      display: none;
+    }
+    section.header {
+        background: transparent;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    header>p{
+        font-size: 3em;
+    }
+    .background-education{
+        display: none;
+    }
+    .education-image{
+        flex-direction: column;
+    }
+    section.footer{
+        padding: 70px 0;
+    }
+    .footer-text{
+        font-size: 2em;
+        padding: 5px;
+    }
+    .social-block{
+        width: auto;
+        flex-direction: column;
+    }
+    input.buttonForm{
+        margin: 10px auto;
+        display: block;
+        position: relative;
+    }
+    .form-and-videos{
+        height: initial;
+    }
+    .info-about-me{
+        text-align: left;
+        margin: 60px 0px 0px 0px;
+    }
+    .form-client{
+        padding: 15px;
+    }
+    .urfinjus-copyright{
+        padding-left: 0px;
+    }
+    header{
+        padding-top: 0px;
+    }
+}
